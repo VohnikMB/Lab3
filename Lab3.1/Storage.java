@@ -26,7 +26,15 @@ public class Storage {
                 .filter(product -> product.getName().equals(name)).collect(Collectors.toList());
     }
 
-    public static List<Product> addProduct(List<Product> products,String name,int i){
+    public static void addProduct(List<Product> products, String name, float i){
+        List<Product> productsAdd=new ArrayList<>(filterByProductName(products,name));
+        for (Product product:products){
+            if (productsAdd.contains(product)){
+                product.setAmount(i);
+            }
+        }
+    }
+    public static List<Product> addProductList(List<Product> products,String name,float i){
         List<Product> productsAdd=new ArrayList<>(filterByProductName(products,name));
         for (Product product:products){
             if (productsAdd.contains(product)){
@@ -35,6 +43,17 @@ public class Storage {
         }
         return products;
     }
+
+    public static void buyProductClient(List<Product> products, String name, float i){
+        List<Product> productsAdd=new ArrayList<>(Storage.filterByProductName(products,name));
+        for (Product product:products){
+            if (productsAdd.contains(product)){
+                product.buyAmount(i);
+            }
+        }
+    }
+
+
 
 
 }

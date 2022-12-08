@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -9,6 +10,16 @@ public class Main {
         startList = Storage.getAddStorage(startList,"Tomatoes", 22, 15f, Type.VEGETABLES);
         System.out.println(startList);
         Storage.addProduct(startList, "Tomatoes", 4);
+        System.out.println(startList);
+
+        List<ClientProductList> nadiaList = new ArrayList<>();
+        List<ClientProductList> ivanList = new ArrayList<>();
+        nadiaList.add(new ClientProductList(new Product("Tomatoes", 22, 15f, Type.VEGETABLES),10));
+        Client nadia = new Client("Nadia",nadiaList,startList);
+        System.out.println(nadia);
+        ivanList.add(new ClientProductList(new Product("Milk", 11, 24.50f, Type.DAIRY_PRODUCTS),8));
+        Client ivan = new Client("Ivan",ivanList,startList);
+        System.out.println(ivan);
         System.out.println(startList);
     }
 }
