@@ -3,10 +3,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Calculation calculation = new Calculation();
-        Crash crash = new Crash();
         calculation.start();
-        //crash.start();
-    }
+       }
 }
 
 class Calculation extends Thread {
@@ -39,7 +37,7 @@ class Calculation extends Thread {
         System.out.println("Ціна однієї одиниці продукції: "+i);
 
        Crash crash = new Crash();
-       // crash.start();
+        crash.start();
     }
 }
 
