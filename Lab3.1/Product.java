@@ -1,14 +1,13 @@
 public class Product {
     private String name;
     private float price;
-    private Type type;
+
     private float amount;
 
-    public Product(String name,float amount,float price,Type type){
+    public Product(String name,float amount,float price){
         this.amount=amount;
         this.name=name;
         this.price=price;
-        this.type=type;
     }
     public String getName() {
         return name;
@@ -26,15 +25,7 @@ public class Product {
         this.price = price;
     }
 
-    public Type getType() {
-        return type;
-    }
-
-    public void setType(Type type) {
-        this.type = type;
-    }
-
-    public float getAmount() {
+   public float getAmount() {
         return amount;
     }
 
@@ -46,6 +37,6 @@ public class Product {
         this.amount =this.amount - Math.abs(amount);
     }
 @Override public String toString(){
-        return "Product: " + name+" amount: "+amount+" - "+price+" UAH ("+type+");\n";
+        return "Product: " + name+" amount: "+amount+" - "+price+" UAH;\n";
 }
 }

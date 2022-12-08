@@ -7,18 +7,18 @@ public class Storage {
 
     public static List<Product> getStorage() {
         return List.of(
-                new Product("Milk", 40, 24.50f, Type.DAIRY_PRODUCTS),
-                new Product("Yogurt", 35, 12f, Type.DAIRY_PRODUCTS),
-                new Product("Apple", 12, 2.50f, Type.FRUITS),
-                new Product("Pomegranate", 8, 18.50f, Type.FRUITS),
-                new Product("Potato", 27, 3.25f, Type.VEGETABLES),
-                new Product("Chicken", 2, 28f, Type.MEAT_PRODUCTS)
+                new Product("Milk", 40, 24.50f),
+                new Product("Yogurt", 35, 12f ),
+                new Product("Apple", 12, 2.50f),
+                new Product("Pomegranate", 8, 18.50f),
+                new Product("Potato", 27, 3.25f),
+                new Product("Chicken", 2, 28f)
         );
     }
 
-    public static List<Product> getAddStorage(List<Product> actualList,String name, float amount, float price, Type type){
+    public static List<Product> getAddStorage(List<Product> actualList,String name, float amount, float price){
         actualList = new ArrayList<>(actualList);
-        actualList.add(new Product( name, amount, price,type));
+        actualList.add(new Product( name, amount, price));
         return actualList;
     }
     public static List<Product>filterByProductName(List<Product> products, String name){

@@ -12,6 +12,7 @@ public class Client {
         }
     }
 
+
     @Override
     public String toString() {
         StringBuilder end= new StringBuilder();
@@ -20,6 +21,7 @@ public class Client {
         }
         return "Client: " + name + "\nBuy: " + end+"\n";
     }
+
 
 }
 
