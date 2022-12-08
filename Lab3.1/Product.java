@@ -39,7 +39,7 @@ public class Product {
     }
 
     public void setAmount(float amount) {
-        this.amount = amount;
+        this.amount =this.amount + amount;
     }
 @Override public String toString(){
         return "Product: " + name+" amount: "+amount+" - "+price+" UAH ("+type+");\n";

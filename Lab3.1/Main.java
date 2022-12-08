@@ -8,7 +8,7 @@ public class Main {
         startList = Storage.getAddStorage(startList,"Sausages", 6, 19f, Type.MEAT_PRODUCTS);
         startList = Storage.getAddStorage(startList,"Tomatoes", 22, 15f, Type.VEGETABLES);
         System.out.println(startList);
-        //startList = Storage.filterByProductName(startList,"Potato");
-        //System.out.println(startList);
+        Storage.addProduct(startList, "Tomatoes", 4);
+        System.out.println(startList);
     }
 }

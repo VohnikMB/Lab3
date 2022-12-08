@@ -26,7 +26,15 @@ public class Storage {
                 .filter(product -> product.getName().equals(name)).collect(Collectors.toList());
     }
 
-
+    public static List<Product> addProduct(List<Product> products,String name,int i){
+        List<Product> productsAdd=new ArrayList<>(filterByProductName(products,name));
+        for (Product product:products){
+            if (productsAdd.contains(product)){
+                product.setAmount(i);
+            }
+        }
+        return products;
+    }
 
 
 }
